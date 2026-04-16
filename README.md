@@ -33,32 +33,11 @@
 ---
 
 ## 화면 구성
-hereView
-└── NavigationStack
-└── CarouselView
-├── mapView          # 지도 + 유저 선택 Menu
-└── ScrollView (horizontal)
-└── CardView     # 추억 카드
-└── MainView # 날짜·장소·사람 입력 (NavigationLink)
----
+hereView<br> 
+└── NavigationStack<br> 
+└── CarouselView<br> 
+├── mapView          # 지도 + 유저 선택 Menu<br> 
+└── ScrollView (horizontal)<br> 
+└── CardView     # 추억 카드<br> 
+└── MainView # 날짜·장소·사람 입력 (NavigationLink)<br> 
 
-## 데이터 모델
-
-```swift
-struct CardData {
-    let imageName: String?    // 에셋 이름 (nil = 빈 카드)
-    let title: String
-    let date: String
-    let place: String
-    let highlightMap: String? // 지도 오버레이 이미지
-}
-```
-
----
-
-## 요구사항
-
-- iOS 17+ (`scrollTransition` API 의존)
-- Xcode 16+
-- `NSCameraUsageDescription` — Info.plist에 카메라 권한 키 추가 필요
-- 이미지 에셋(`phopopicture`, `youngildae`, `map`, `map3_1` 등) Assets.xcassets 직접 추가
